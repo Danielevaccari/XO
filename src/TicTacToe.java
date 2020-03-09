@@ -16,7 +16,7 @@ public class TicTacToe {
 				System.out.print(peliLauta[i][k]);
 			}
 			System.out.println();
-			System.out.print("moi!");
+			//ihfwfahilagi
 		}
 	}
 }
