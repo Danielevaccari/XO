@@ -7,7 +7,7 @@ public class TicTacToe {
 	
 	
 	public static void main(String[] args) {
-		
+		//Ristinollan pelilauta char-taulukkona
 		char[][] peliLauta = {{' ', '-', '-', '-', '-', '-', ' ' }, 
 							  {'|', ' ', '|', ' ', '|', ' ', '|'},
 							  {'|', '-', '+', ' ', '+', '-', '|'},
@@ -15,7 +15,8 @@ public class TicTacToe {
 							  {'|', '-', '+', ' ', '+', '-', '|'},
 							  {'|', ' ', '|', ' ', '|', ' ', '|'},
 							  {' ', '-', '-', '-', '-', '-', ' '}};
-		
+		//Kysytään mihin kohtaan halutaan sijoittaa X
+		//Indeksointi toimii vasemmalta oikealle ja ylhäältä alas
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Insert");
 		int index = scanner.nextInt();
@@ -51,9 +52,12 @@ public class TicTacToe {
 		}
 		printPeliLauta(peliLauta);
 	}
-
+	/**
+	 * Tulostaa pelilaudan sen hetkisessä tilassaan
+	 * @param peliLauta
+	 */
 	public static void printPeliLauta(char[][] peliLauta) {
-
+		//Käydään läpi jokainen indeksi ja printataan se
 		for (int i = 0;i < peliLauta.length;i++) {
 			for (int k = 0;k < peliLauta.length;k++) {
 				System.out.print(peliLauta[i][k]);
