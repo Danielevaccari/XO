@@ -138,9 +138,6 @@ public class TicTacToe {
 								break;
 						}
 	}
-	/**
-	 * 
-	 * @param peliLauta
-	 */
 	
+	public static
 }
