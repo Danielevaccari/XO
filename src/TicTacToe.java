@@ -139,5 +139,5 @@ public class TicTacToe {
 						}
 	}
 	
-	public static
+	
 }
