@@ -139,5 +139,7 @@ public class TicTacToe {
 						}
 	}
 	
-	
+	public static void tarkistaOnkoOVoittanut(char[][] peliLauta) {
+		
+	}
 }
