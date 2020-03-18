@@ -1,12 +1,21 @@
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ristikko extends logiikka {
+
 	// Ristinollan pelilauta char-taulukkona
 	public static char[][] peliLauta = { { ' ', '-', '-', '-', '-', '-', ' ' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
-			{ '|', '-', '+', ' ', '+', '-', '|' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
+			{ '|', '-', '+', '-', '+', '-', '|' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
 			{ '|', '-', '+', ' ', '+', '-', '|' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
 			{ ' ', '-', '-', '-', '-', '-', ' ' } };
+	
+	public static char[][] esimerkkiPeliLauta = { { ' ', '-', '-', '-', '-', '-', ' ' }, { '|', '1', '|', '2', '|', '3', '|' },
+			{ '|', '-', '+', '-', '+', '-', '|' }, { '|', '4', '|', '5', '|', '6', '|' },
+			{ '|', '-', '+', '-', '+', '-', '|' }, { '|', '7', '|', '8', '|', '9', '|' },
+			{ ' ', '-', '-', '-', '-', '-', ' ' } };
+
+	private ArrayList<Integer> varatutRuudut = new ArrayList<>();
 
 	/**
 	 * Tulostaa pelilaudan sen hetkisessä tilassaan
@@ -16,6 +25,15 @@ public class ristikko extends logiikka {
 		for (int i = 0; i < peliLauta.length; i++) {
 			for (int k = 0; k < peliLauta.length; k++) {
 				System.out.print(peliLauta[i][k]);
+			}
+			System.out.println();
+		}
+	}
+	public void tulostaEsimerkkiPeliLauta() {
+		// Käydään läpi jokainen indeksi ja printataan se
+		for (int i = 0; i < esimerkkiPeliLauta.length; i++) {
+			for (int k = 0; k < esimerkkiPeliLauta.length; k++) {
+				System.out.print(esimerkkiPeliLauta[i][k]);
 			}
 			System.out.println();
 		}
@@ -44,34 +62,40 @@ public class ristikko extends logiikka {
 		}
 
 		// Indeksinä toimii kokonaisluvut
-		switch (index) {
-		case 1:
-			peliLauta[1][1] = 'X';
-			break;
-		case 2:
-			peliLauta[1][3] = 'X';
-			break;
-		case 3:
-			peliLauta[1][5] = 'X';
-			break;
-		case 4:
-			peliLauta[3][1] = 'X';
-			break;
-		case 5:
-			peliLauta[3][3] = 'X';
-			break;
-		case 6:
-			peliLauta[3][5] = 'X';
-			break;
-		case 7:
-			peliLauta[5][1] = 'X';
-			break;
-		case 8:
-			peliLauta[5][3] = 'X';
-			break;
-		case 9:
-			peliLauta[5][5] = 'X';
-			break;
+		if (!varatutRuudut.contains(index)) {
+			switch (index) {
+			case 1:
+				peliLauta[1][1] = 'X';
+				break;
+			case 2:
+				peliLauta[1][3] = 'X';
+				break;
+			case 3:
+				peliLauta[1][5] = 'X';
+				break;
+			case 4:
+				peliLauta[3][1] = 'X';
+				break;
+			case 5:
+				peliLauta[3][3] = 'X';
+				break;
+			case 6:
+				peliLauta[3][5] = 'X';
+				break;
+			case 7:
+				peliLauta[5][1] = 'X';
+				break;
+			case 8:
+				peliLauta[5][3] = 'X';
+				break;
+			case 9:
+				peliLauta[5][5] = 'X';
+				break;
+			}
+			varatutRuudut.add(index);
+		} else {
+			System.out.print("Ruutu on varattu!");
+			sijoitaX();
 		}
 	}
 
@@ -98,34 +122,40 @@ public class ristikko extends logiikka {
 		}
 
 		// Indeksinä toimii kokonaisluvut
-		switch (index) {
-		case 1:
-			peliLauta[1][1] = 'O';
-			break;
-		case 2:
-			peliLauta[1][3] = 'O';
-			break;
-		case 3:
-			peliLauta[1][5] = 'O';
-			break;
-		case 4:
-			peliLauta[3][1] = 'O';
-			break;
-		case 5:
-			peliLauta[3][3] = 'O';
-			break;
-		case 6:
-			peliLauta[3][5] = 'O';
-			break;
-		case 7:
-			peliLauta[5][1] = 'O';
-			break;
-		case 8:
-			peliLauta[5][3] = 'O';
-			break;
-		case 9:
-			peliLauta[5][5] = 'O';
-			break;
+		if (!varatutRuudut.contains(index)) {
+			switch (index) {
+			case 1:
+				peliLauta[1][1] = 'O';
+				break;
+			case 2:
+				peliLauta[1][3] = 'O';
+				break;
+			case 3:
+				peliLauta[1][5] = 'O';
+				break;
+			case 4:
+				peliLauta[3][1] = 'O';
+				break;
+			case 5:
+				peliLauta[3][3] = 'O';
+				break;
+			case 6:
+				peliLauta[3][5] = 'O';
+				break;
+			case 7:
+				peliLauta[5][1] = 'O';
+				break;
+			case 8:
+				peliLauta[5][3] = 'O';
+				break;
+			case 9:
+				peliLauta[5][5] = 'O';
+				break;
+			}
+			varatutRuudut.add(index);
+		} else {
+			System.out.print("Ruutu on varattu!");
+			sijoitaO();
 		}
 	}
 }

@@ -14,7 +14,7 @@ public class logiikka {
 			ristikko.peliLauta[3][1] == 'X' &&
 			ristikko.peliLauta[5][1] == 'X') 
 		{
-			jatketaankoPelia = false;	
+			jatketaankoPelia = false;
 		}
 		//keski vertikaali
 		else if (ristikko.peliLauta[1][3] == 'X' &&
