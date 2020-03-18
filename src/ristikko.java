@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ristikko extends logiikka {
 	// Ristinollan pelilauta char-taulukkona
-	private char[][] peliLauta = { { ' ', '-', '-', '-', '-', '-', ' ' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
+	public static char[][] peliLauta = { { ' ', '-', '-', '-', '-', '-', ' ' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
 			{ '|', '-', '+', ' ', '+', '-', '|' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
 			{ '|', '-', '+', ' ', '+', '-', '|' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
 			{ ' ', '-', '-', '-', '-', '-', ' ' } };

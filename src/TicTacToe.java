@@ -3,9 +3,13 @@ public class TicTacToe {
 	public static void main(String[] args) {
 		ristikko lauta = new ristikko();
 
-		lauta.sijoitaX();
-		lauta.tulostaPeliLauta();
-		lauta.sijoitaO();
-		lauta.tulostaPeliLauta();
+		while (lauta.annaJatketaankoPelia()) {
+			lauta.sijoitaX();
+			lauta.tarkistaOnkoXVoittanut();
+			lauta.tulostaPeliLauta();
+			lauta.sijoitaO();
+			lauta.tarkistaOnkoOVoittanut();
+			lauta.tulostaPeliLauta();
+		}
 	}
 }
