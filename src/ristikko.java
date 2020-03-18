@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ristikko extends logiikka{
@@ -37,10 +38,10 @@ public class ristikko extends logiikka{
 					try {
 						index = scanner.nextInt();
 						if (index < 1 || index > 9) {
-							throw new Exception();
+							throw new InputMismatchException();
 						}
 					}
-					catch (Exception e) {
+					catch (InputMismatchException e) {
 						System.out.println("- Ole hyvä ja syötä kokonaisluku väliltä [1-9] -");
 						sijoitaX();
 					}
@@ -92,11 +93,11 @@ public class ristikko extends logiikka{
 							try {
 								index = scanner.nextInt();
 								if (index < 1 || index > 9) {
-									throw new Exception();
+									throw new InputMismatchException();
 								}
 							}
-							catch (Exception e) {
-								System.out.println("- Ole hyvä ja syötä kokonaisluku -");
+							catch (InputMismatchException e) {
+								System.out.println("- Ole hyvä ja syötä kokonaisluku väliltä [1-9] -");
 								sijoitaO();
 							}
 							
