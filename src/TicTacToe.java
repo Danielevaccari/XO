@@ -4,17 +4,17 @@ public class TicTacToe {
 	
 	private boolean pelia = true;
 	
-	
+	//Ristinollan pelilauta char-taulukkona
+	private static char[][] peliLauta = {{' ', '-', '-', '-', '-', '-', ' '}, 
+					  					 {'|', ' ', '|', ' ', '|', ' ', '|'},
+					  					 {'|', '-', '+', ' ', '+', '-', '|'},
+					  					 {'|', ' ', '|', ' ', '|', ' ', '|'},
+					  					 {'|', '-', '+', ' ', '+', '-', '|'},
+					  					 {'|', ' ', '|', ' ', '|', ' ', '|'},
+					  					 {' ', '-', '-', '-', '-', '-', ' '}};
 	
 	public static void main(String[] args) {
-		//Ristinollan pelilauta char-taulukkona
-		char[][] peliLauta = {{' ', '-', '-', '-', '-', '-', ' ' }, 
-				  			{'|', ' ', '|', ' ', '|', ' ', '|'},
-				  			{'|', '-', '+', ' ', '+', '-', '|'},
-				  			{'|', ' ', '|', ' ', '|', ' ', '|'},
-				  			{'|', '-', '+', ' ', '+', '-', '|'},
-				  			{'|', ' ', '|', ' ', '|', ' ', '|'},
-				  			{' ', '-', '-', '-', '-', '-', ' '}};
+		
 		
 		sijoitaX(peliLauta);
 		sijoitaO(peliLauta);
@@ -138,8 +138,11 @@ public class TicTacToe {
 								break;
 						}
 	}
-	
+	/**
+	 * Tarkistaa onko O merkillä pelaava pelaaja voittanut pelin
+	 * @param peliLauta
+	 */
 	public static void tarkistaOnkoOVoittanut(char[][] peliLauta) {
-		
+		//tee tämä
 	}
 }
