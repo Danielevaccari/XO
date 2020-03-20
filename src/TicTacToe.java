@@ -17,7 +17,6 @@ public class TicTacToe {
 			}
 			lauta.tarkistaOnkoTasapeli();
 			if (lauta.getOnkoTasapeli()) {
-				System.out.println("Tasapeli!");
 				break;
 			}
 			// pelaaja2 vuoro
@@ -30,7 +29,6 @@ public class TicTacToe {
 			}
 			lauta.tarkistaOnkoTasapeli();
 			if (lauta.getOnkoTasapeli()) {
-				System.out.println("Tasapeli!");
 				break;
 			}
 

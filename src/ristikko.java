@@ -3,6 +3,9 @@ import java.util.Scanner;
 
 public class ristikko extends logiikka {
 
+	/**
+	 * Luo uuden ristinollapelin ja asettaa pelaajien nimet
+	 */
 	public ristikko() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Anna pelaajan nimi, joka pelaa X nappuloilla");
@@ -16,14 +19,12 @@ public class ristikko extends logiikka {
 			{ '|', '-', '+', '-', '+', '-', '|' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
 			{ '|', '-', '+', ' ', '+', '-', '|' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
 			{ ' ', '-', '-', '-', '-', '-', ' ' } };
-	
-	//Ristinollan esimerkkipelilauta, jossa näkyy indeksit
+
+	// Ristinollan esimerkkipelilauta, jossa näkyy indeksit
 	public static char[][] esimerkkiPeliLauta = { { ' ', '-', '-', '-', '-', '-', ' ' },
 			{ '|', '1', '|', '2', '|', '3', '|' }, { '|', '-', '+', '-', '+', '-', '|' },
 			{ '|', '4', '|', '5', '|', '6', '|' }, { '|', '-', '+', '-', '+', '-', '|' },
 			{ '|', '7', '|', '8', '|', '9', '|' }, { ' ', '-', '-', '-', '-', '-', ' ' } };
-
-	
 
 	/**
 	 * Tulostaa pelilaudan sen hetkisessä tilassaan
@@ -49,7 +50,9 @@ public class ristikko extends logiikka {
 	}
 
 	/**
-	 * Sijoittaa X:n haluttuun indeksiin
+	 * sijoittaa O:n haluttuun indeksiin käsittelee virheilmoitukset Lisää indeksin
+	 * varattujen ruutujen listaan (vain jos indeksi on välillä [1-9]) käsittelee
+	 * varatut ruudut
 	 **/
 	public void sijoitaX() {
 		// Kysytään mihin kohtaan halutaan sijoittaa X
@@ -61,7 +64,7 @@ public class ristikko extends logiikka {
 		int index = 0;
 
 		try {
-			
+
 			index = scanner.nextInt();
 			if (index < 1 || index > 9) {
 				throw new InputMismatchException();
@@ -102,7 +105,10 @@ public class ristikko extends logiikka {
 				peliLauta[5][5] = 'X';
 				break;
 			}
-			varatutRuudut.add(index);
+			// lopuksi lisätään indeksi varattuihin ruutuihin
+			if (index < 10 && index > 0) {
+				varatutRuudut.add(index);
+			}
 		} else {
 			System.out.println("Ruutu on varattu!");
 			sijoitaX();
@@ -110,7 +116,9 @@ public class ristikko extends logiikka {
 	}
 
 	/**
-	 * sijoittaa O:n haluttuun indeksiin
+	 * sijoittaa O:n haluttuun indeksiin käsittelee virheilmoitukset Lisää indeksin
+	 * varattujen ruutujen listaan (vain jos indeksi on välillä [1-9]) käsittelee
+	 * varatut ruudut
 	 */
 	public void sijoitaO() {
 		// Kysytään mihin kohtaan halutaan sijoittaa O
@@ -162,7 +170,10 @@ public class ristikko extends logiikka {
 				peliLauta[5][5] = 'O';
 				break;
 			}
-			varatutRuudut.add(index);
+			// lopuksi lisätään indeksi varattuihin ruutuihin
+			if (index < 10 && index > 0) {
+				varatutRuudut.add(index);
+			}
 		} else {
 			System.out.println("Ruutu on varattu!");
 			sijoitaO();

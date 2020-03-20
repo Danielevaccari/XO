@@ -4,19 +4,19 @@ public class logiikka extends pelaaja {
 	private boolean jatketaankoPelia = true;
 	private boolean onkoTasapeli = false;
 	protected ArrayList<Integer> varatutRuudut = new ArrayList<>();
-	
+
 	public boolean getOnkoTasapeli() {
 		return onkoTasapeli;
 	}
+
 	public void setOnkoTasapeli(boolean onkoTasapeli) {
 		this.onkoTasapeli = onkoTasapeli;
 	}
 
-	
-
 	public boolean annaJatketaankoPelia() {
 		return jatketaankoPelia;
 	}
+
 	public void asetaJatketaankoPelia(boolean b) {
 		jatketaankoPelia = b;
 	}
