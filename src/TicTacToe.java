@@ -1,33 +1,40 @@
-import java.util.Scanner;
 
 public class TicTacToe {
-	static String pelaaja1;
-	static String pelaaja2;
+
 	public static void main(String[] args) {
 		ristikko lauta = new ristikko();
-			
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Anna pelaajan nimi, joka pelaa X nappuloilla");
-		pelaaja1 = scanner.next();
-		System.out.println("Anna Pelaajan nimi, joka pelaa O nappuloilla");
-		pelaaja2 = scanner.next();
+		
 		lauta.tulostaEsimerkkiPeliLauta();
 		
 		while (lauta.annaJatketaankoPelia()) {
+			//pelaaja1 vuoro
 			lauta.sijoitaX();
+			lauta.tulostaPeliLauta();
 			lauta.tarkistaOnkoXVoittanut();
-			lauta.tulostaPeliLauta();
 			if (!lauta.annaJatketaankoPelia()) {
-				System.out.println(pelaaja1 + " voitti pelin!");
+				System.out.println(lauta.getPelaaja1() + " voitti pelin!");
 				break;
 			}
+			lauta.tarkistaOnkoTasapeli();
+			if (!lauta.annaJatketaankoPelia()) {
+				System.out.println("Tasapeli!");
+				break;
+			}
+			//pelaaja2 vuoro
 			lauta.sijoitaO();
-			lauta.tarkistaOnkoOVoittanut();
 			lauta.tulostaPeliLauta();
+			lauta.tarkistaOnkoOVoittanut();
 			if (!lauta.annaJatketaankoPelia()) {
-				System.out.println(pelaaja1 + " voitti pelin!");
+				System.out.println(lauta.getPelaaja2() + " voitti pelin!");
 				break;
 			}
+			lauta.tarkistaOnkoTasapeli();
+			if (!lauta.annaJatketaankoPelia()) {
+				System.out.println("Tasapeli!");
+				break;
+			}
+			
+			
 		}
 	}
 }

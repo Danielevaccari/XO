@@ -1,8 +1,15 @@
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ristikko extends logiikka {
+
+	public ristikko() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Anna pelaajan nimi, joka pelaa X nappuloilla");
+		setPelaaja1(sc.next());
+		System.out.println("Anna Pelaajan nimi, joka pelaa O nappuloilla");
+		setPelaaja2(sc.next());
+	}
 
 	// Ristinollan pelilauta char-taulukkona
 	public static char[][] peliLauta = { { ' ', '-', '-', '-', '-', '-', ' ' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
@@ -10,12 +17,13 @@ public class ristikko extends logiikka {
 			{ '|', '-', '+', ' ', '+', '-', '|' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
 			{ ' ', '-', '-', '-', '-', '-', ' ' } };
 	
-	public static char[][] esimerkkiPeliLauta = { { ' ', '-', '-', '-', '-', '-', ' ' }, { '|', '1', '|', '2', '|', '3', '|' },
-			{ '|', '-', '+', '-', '+', '-', '|' }, { '|', '4', '|', '5', '|', '6', '|' },
-			{ '|', '-', '+', '-', '+', '-', '|' }, { '|', '7', '|', '8', '|', '9', '|' },
-			{ ' ', '-', '-', '-', '-', '-', ' ' } };
+	//Ristinollan esimerkkipelilauta, jossa näkyy indeksit
+	public static char[][] esimerkkiPeliLauta = { { ' ', '-', '-', '-', '-', '-', ' ' },
+			{ '|', '1', '|', '2', '|', '3', '|' }, { '|', '-', '+', '-', '+', '-', '|' },
+			{ '|', '4', '|', '5', '|', '6', '|' }, { '|', '-', '+', '-', '+', '-', '|' },
+			{ '|', '7', '|', '8', '|', '9', '|' }, { ' ', '-', '-', '-', '-', '-', ' ' } };
 
-	private ArrayList<Integer> varatutRuudut = new ArrayList<>();
+	
 
 	/**
 	 * Tulostaa pelilaudan sen hetkisessä tilassaan
@@ -29,6 +37,7 @@ public class ristikko extends logiikka {
 			System.out.println();
 		}
 	}
+
 	public void tulostaEsimerkkiPeliLauta() {
 		// Käydään läpi jokainen indeksi ja printataan se
 		for (int i = 0; i < esimerkkiPeliLauta.length; i++) {
@@ -94,7 +103,7 @@ public class ristikko extends logiikka {
 			}
 			varatutRuudut.add(index);
 		} else {
-			System.out.print("Ruutu on varattu!");
+			System.out.println("Ruutu on varattu!");
 			sijoitaX();
 		}
 	}
@@ -154,7 +163,7 @@ public class ristikko extends logiikka {
 			}
 			varatutRuudut.add(index);
 		} else {
-			System.out.print("Ruutu on varattu!");
+			System.out.println("Ruutu on varattu!");
 			sijoitaO();
 		}
 	}
