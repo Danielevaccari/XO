@@ -61,6 +61,7 @@ public class ristikko extends logiikka {
 		int index = 0;
 
 		try {
+			
 			index = scanner.nextInt();
 			if (index < 1 || index > 9) {
 				throw new InputMismatchException();

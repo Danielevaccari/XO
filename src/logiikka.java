@@ -2,7 +2,17 @@ import java.util.ArrayList;
 
 public class logiikka extends pelaaja {
 	private boolean jatketaankoPelia = true;
+	private boolean onkoTasapeli = false;
 	protected ArrayList<Integer> varatutRuudut = new ArrayList<>();
+	
+	public boolean getOnkoTasapeli() {
+		return onkoTasapeli;
+	}
+	public void setOnkoTasapeli(boolean onkoTasapeli) {
+		this.onkoTasapeli = onkoTasapeli;
+	}
+
+	
 
 	public boolean annaJatketaankoPelia() {
 		return jatketaankoPelia;
@@ -18,7 +28,7 @@ public class logiikka extends pelaaja {
 		// Tarkastetaan heti aluksi onko pelilaudalla tilaa
 		// Jos ei ole peli lopetetaan ja ilmoitetaan tasapelistä
 		if (varatutRuudut.size() == 9) {
-			asetaJatketaankoPelia(false);
+			setOnkoTasapeli(true);
 			System.out.println("Tasapeli!");
 		}
 	}

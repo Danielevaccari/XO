@@ -3,11 +3,11 @@ public class TicTacToe {
 
 	public static void main(String[] args) {
 		ristikko lauta = new ristikko();
-		
+
 		lauta.tulostaEsimerkkiPeliLauta();
-		
+
 		while (lauta.annaJatketaankoPelia()) {
-			//pelaaja1 vuoro
+			// pelaaja1 vuoro
 			lauta.sijoitaX();
 			lauta.tulostaPeliLauta();
 			lauta.tarkistaOnkoXVoittanut();
@@ -16,11 +16,11 @@ public class TicTacToe {
 				break;
 			}
 			lauta.tarkistaOnkoTasapeli();
-			if (!lauta.annaJatketaankoPelia()) {
+			if (lauta.getOnkoTasapeli()) {
 				System.out.println("Tasapeli!");
 				break;
 			}
-			//pelaaja2 vuoro
+			// pelaaja2 vuoro
 			lauta.sijoitaO();
 			lauta.tulostaPeliLauta();
 			lauta.tarkistaOnkoOVoittanut();
@@ -29,12 +29,11 @@ public class TicTacToe {
 				break;
 			}
 			lauta.tarkistaOnkoTasapeli();
-			if (!lauta.annaJatketaankoPelia()) {
+			if (lauta.getOnkoTasapeli()) {
 				System.out.println("Tasapeli!");
 				break;
 			}
-			
-			
+
 		}
 	}
 }
