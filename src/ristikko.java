@@ -110,7 +110,7 @@ public class ristikko extends logiikka {
 				varatutRuudut.add(index);
 			}
 		} else {
-			System.out.println("Ruutu on varattu!");
+			System.out.println("- Ruutu on varattu! -");
 			sijoitaX();
 		}
 	}
@@ -174,7 +174,7 @@ public class ristikko extends logiikka {
 				varatutRuudut.add(index);
 			}
 		} else {
-			System.out.println("Ruutu on varattu!");
+			System.out.println("- Ruutu on varattu! -");
 			sijoitaO();
 		}
 	}

@@ -72,8 +72,8 @@ public class logiikka extends pelaaja {
 			jatketaankoPelia = false;
 		}
 		// vasen alakulma - oikea yläkulma diagonaali
-		else if (ristikko.peliLauta[3][1] == 'X' && ristikko.peliLauta[3][3] == 'X'
-				&& ristikko.peliLauta[3][5] == 'X') {
+		else if (ristikko.peliLauta[5][1] == 'X' && ristikko.peliLauta[3][3] == 'X'
+				&& ristikko.peliLauta[1][5] == 'X') {
 			jatketaankoPelia = false;
 		}
 	}
@@ -88,7 +88,7 @@ public class logiikka extends pelaaja {
 		}
 		// keski vertikaali
 		else if (ristikko.peliLauta[1][3] == 'O' && ristikko.peliLauta[3][3] == 'O'
-				&& ristikko.peliLauta[5][5] == 'O') {
+				&& ristikko.peliLauta[5][3] == 'O') {
 			jatketaankoPelia = false;
 		}
 		// oikea vertikaali
