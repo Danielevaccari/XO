@@ -8,9 +8,9 @@ public class ristikko extends logiikka {
 	 */
 	public ristikko() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Anna pelaajan nimi, joka pelaa X nappuloilla");
+		System.out.println("- Syötä pelaajan nimi, joka pelaa X nappuloilla -");
 		setPelaaja1(sc.next());
-		System.out.println("Anna Pelaajan nimi, joka pelaa O nappuloilla");
+		System.out.println("- Syötä pelaajan nimi, joka pelaa O nappuloilla -");
 		setPelaaja2(sc.next());
 	}
 
@@ -41,6 +41,7 @@ public class ristikko extends logiikka {
 
 	public void tulostaEsimerkkiPeliLauta() {
 		// Käydään läpi jokainen indeksi ja printataan se
+		System.out.println("- Nappuiloiden indeksit ovat seuraavanlaiset -");
 		for (int i = 0; i < esimerkkiPeliLauta.length; i++) {
 			for (int k = 0; k < esimerkkiPeliLauta.length; k++) {
 				System.out.print(esimerkkiPeliLauta[i][k]);
@@ -58,8 +59,7 @@ public class ristikko extends logiikka {
 		// Kysytään mihin kohtaan halutaan sijoittaa X
 		// Indeksointi toimii vasemmalta oikealle ja ylhäältä alas
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Anna ruudun numero kokonaislukuna johon haluat sijoittaa X:n");
-		System.out.println("Numerointi on vasemmalta oikealle ja ylhäältä alas:");
+		System.out.println("- Syötä kokonaisluku mihin haluat sijoittaa X:n -");
 
 		int index = 0;
 
@@ -124,8 +124,7 @@ public class ristikko extends logiikka {
 		// Kysytään mihin kohtaan halutaan sijoittaa O
 		// Indeksointi toimii vasemmalta oikealle ja ylhäältä alas
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Anna ruudun numero kokonaislukuna johon haluat sijoittaa O:n");
-		System.out.println("Numerointi on vasemmalta oikealle ja ylhäältä alas:");
+		System.out.println("- Syötä kokonaisluku mihin haluat sijoittaa O:n -");
 
 		int index = 0;
 
