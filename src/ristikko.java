@@ -41,7 +41,7 @@ public class ristikko extends logiikka {
 
 	public void tulostaEsimerkkiPeliLauta() {
 		// Käydään läpi jokainen indeksi ja printataan se
-		System.out.println("- Nappuiloiden indeksit ovat seuraavanlaiset -");
+		System.out.println("- Nappuloiden indeksit ovat seuraavanlaiset -");
 		for (int i = 0; i < esimerkkiPeliLauta.length; i++) {
 			for (int k = 0; k < esimerkkiPeliLauta.length; k++) {
 				System.out.print(esimerkkiPeliLauta[i][k]);
