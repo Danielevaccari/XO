@@ -17,7 +17,7 @@ public class ristikko extends logiikka {
 	// Ristinollan pelilauta char-taulukkona
 	public static char[][] peliLauta = { { ' ', '-', '-', '-', '-', '-', ' ' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
 			{ '|', '-', '+', '-', '+', '-', '|' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
-			{ '|', '-', '+', ' ', '+', '-', '|' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
+			{ '|', '-', '+', '-', '+', '-', '|' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
 			{ ' ', '-', '-', '-', '-', '-', ' ' } };
 
 	// Ristinollan esimerkkipelilauta, jossa näkyy indeksit
