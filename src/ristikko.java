@@ -216,4 +216,6 @@ public class ristikko extends logiikka {
 			asetaTietokonepelaajanNappula();
 		}
 	}
+
+	
 }

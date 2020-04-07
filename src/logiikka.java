@@ -135,7 +135,7 @@ public class logiikka extends pelaaja {
 
 		Random r = new Random();
 
-		int num = r.nextInt(10);
+		int num = r.nextInt(9) + 1;
 		return num;
 	}
 
