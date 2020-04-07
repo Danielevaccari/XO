@@ -6,13 +6,6 @@ public class ristikko extends logiikka {
 	/**
 	 * Luo uuden ristinollapelin ja asettaa pelaajien nimet
 	 */
-	public ristikko() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("- Syötä pelaajan nimi, joka pelaa X nappuloilla -");
-		setPelaaja1(sc.next());
-		System.out.println("- Syötä pelaajan nimi, joka pelaa O nappuloilla -");
-		setPelaaja2(sc.next());
-	}
 
 	// Ristinollan pelilauta char-taulukkona
 	public static char[][] peliLauta = { { ' ', '-', '-', '-', '-', '-', ' ' }, { '|', ' ', '|', ' ', '|', ' ', '|' },
@@ -51,7 +44,7 @@ public class ristikko extends logiikka {
 	}
 
 	/**
-	 * sijoittaa O:n haluttuun indeksiin käsittelee virheilmoitukset Lisää indeksin
+	 * sijoittaa X:n haluttuun indeksiin käsittelee virheilmoitukset Lisää indeksin
 	 * varattujen ruutujen listaan (vain jos indeksi on välillä [1-9]) käsittelee
 	 * varatut ruudut
 	 **/
@@ -176,6 +169,51 @@ public class ristikko extends logiikka {
 		} else {
 			System.out.println("- Ruutu on varattu! -");
 			sijoitaO();
+		}
+	}
+
+	/**
+	 * Asettaa tietokonepelaajan nappulan, eli O:n satunnaiseen pelilaudan indeksiin
+	 */
+	public void asetaTietokonepelaajanNappula() {
+		// Indeksinä toimii kokonaisluvut
+		int cpuIndex = annaSatunnainenPelilaudanIndeksi();
+		if (!varatutRuudut.contains(cpuIndex)) {
+			switch (cpuIndex) {
+			case 1:
+				peliLauta[1][1] = 'O';
+				break;
+			case 2:
+				peliLauta[1][3] = 'O';
+				break;
+			case 3:
+				peliLauta[1][5] = 'O';
+				break;
+			case 4:
+				peliLauta[3][1] = 'O';
+				break;
+			case 5:
+				peliLauta[3][3] = 'O';
+				break;
+			case 6:
+				peliLauta[3][5] = 'O';
+				break;
+			case 7:
+				peliLauta[5][1] = 'O';
+				break;
+			case 8:
+				peliLauta[5][3] = 'O';
+				break;
+			case 9:
+				peliLauta[5][5] = 'O';
+				break;
+			}
+			// Lisätään indeksi varattuihin ruutuihin
+			if (cpuIndex < 10 && cpuIndex > 0) {
+				varatutRuudut.add(cpuIndex);
+			}
+		} else {
+			asetaTietokonepelaajanNappula();
 		}
 	}
 }

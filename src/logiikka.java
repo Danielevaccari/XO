@@ -1,6 +1,9 @@
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
 
 public class logiikka extends pelaaja {
+
 	private boolean jatketaankoPelia = true;
 	private boolean onkoTasapeli = false;
 	protected ArrayList<Integer> varatutRuudut = new ArrayList<>();
@@ -22,7 +25,7 @@ public class logiikka extends pelaaja {
 	}
 
 	/**
-	 * Tarkistaa onko tasapeli
+	 * Tarkistaa onko tasapeli ja tulostaa "tasapeli !"
 	 */
 	public void tarkistaOnkoTasapeli() {
 		// Tarkastetaan heti aluksi onko pelilaudalla tilaa
@@ -121,5 +124,33 @@ public class logiikka extends pelaaja {
 				&& ristikko.peliLauta[1][5] == 'O') {
 			jatketaankoPelia = false;
 		}
+	}
+
+	/**
+	 * Palauttaa Satunnaisen kokonaisluvun väliltä [1-9]
+	 * 
+	 * @return
+	 */
+	public int annaSatunnainenPelilaudanIndeksi() {
+
+		Random r = new Random();
+
+		int num = r.nextInt(10);
+		return num;
+	}
+
+	public int palautaYksinVaiKaksinpeli() {
+		Scanner scanner = new Scanner(System.in);
+		int yksTaiKaks = 0;
+		try {
+			yksTaiKaks = scanner.nextInt();
+			if (yksTaiKaks != 1 && yksTaiKaks != 2) {
+				throw new Exception();
+			}
+		} catch (Exception e) {
+			System.out.println("- Syötä kokonaisluku 1 tai 2 -");
+			palautaYksinVaiKaksinpeli();
+		}
+		return yksTaiKaks;
 	}
 }

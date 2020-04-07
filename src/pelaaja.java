@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class pelaaja {
 
@@ -18,5 +19,22 @@ public class pelaaja {
 
 	public void setPelaaja2(String pelaaja2) {
 		this.pelaaja2 = pelaaja2;
+	}
+
+	public void asetaPelaajienNimet() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("- Syötä pelaajan nimi, joka pelaa X nappuloilla -");
+		setPelaaja1(sc.next());
+		System.out.println("- Syötä pelaajan nimi, joka pelaa O nappuloilla -");
+		setPelaaja2(sc.next());
+	}
+
+	/**
+	 * Asettaa yksinpelin pelaajan nimen muuttujaan pelaaja1
+	 */
+	public void asetaPelaajanNimi() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("- Syötä pelaajan nimi -");
+		setPelaaja1(scanner.next());
 	}
 }
