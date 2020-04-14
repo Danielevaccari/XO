@@ -128,8 +128,7 @@ public class logiikka extends pelaaja {
 
 	/**
 	 * Palauttaa Satunnaisen kokonaisluvun väliltä [1-9]
-	 * 
-	 * @return
+	 * @return int
 	 */
 	public int annaSatunnainenPelilaudanIndeksi() {
 
