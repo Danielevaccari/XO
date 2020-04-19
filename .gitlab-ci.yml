@@ -1,0 +1,8 @@
+build:
+    stage: build
+
+test:
+    stage: test
+    
+deploy:
+    stage: deploy
