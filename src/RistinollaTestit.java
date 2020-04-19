@@ -7,17 +7,11 @@ class RistinollaTestit {
 	ristikko testilauta = new ristikko();
 	
 	public void asettaakoSijoitusmetodiXpelinappulanOikeaanKohtaan() {
-		testilauta.sijoitaX();
 		
-	}
-	
-	public void antaakoSatunnaisenIndeksinVäliltäYksViivaYhdeksän(){
-		assert testilauta.annaSatunnainenPelilaudanIndeksi() >= 1 && testilauta.annaSatunnainenPelilaudanIndeksi() <= 9;
 	}
 	@Test
-	void test() {
-		
-		
+	public void antaakoSatunnaisenIndeksinVäliltäYksViivaYhdeksän(){
+		assert testilauta.annaSatunnainenPelilaudanIndeksi() >= 1 && testilauta.annaSatunnainenPelilaudanIndeksi() <= 9;
 	}
 
 }

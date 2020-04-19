@@ -11,6 +11,7 @@ public class TicTacToe {
 
 		ristikko lauta = new ristikko();
 		//vääräsyöte -> kaksinpeli korjaa laittamalla rajotukset inputille
+		
 
 		if (lauta.palautaYksinVaiKaksinpeli() == 1) {
 			
