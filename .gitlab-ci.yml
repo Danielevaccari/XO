@@ -1,15 +1,17 @@
 image: maven:latest
-build:
-    stage: build
-        script:
-        - mvn compile
-test:
-stage: test
-    script:
-        - mvn test
-deploy:
-    stage: deploy
-    script:
-        - mvn deploy
-    only:
-        - master
+
+build: 
+  script: 
+    - "mvn compile"
+  stage: build
+deploy: 
+  only: 
+    - master
+  script: 
+    - "mvn deploy"
+  stage: deploy
+mage: "maven:latest"
+test: 
+  script: 
+    - "mvn test"
+  stage: test
