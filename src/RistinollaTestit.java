@@ -8,6 +8,11 @@ class RistinollaTestit {
 	
 	public void asettaakoSijoitusmetodiXpelinappulanOikeaanKohtaan() {
 		testilauta.sijoitaX();
+		
+	}
+	
+	public void antaakoSatunnaisenIndeksinVäliltäYksViivaYhdeksän(){
+		assert testilauta.annaSatunnainenPelilaudanIndeksi() >= 1 && testilauta.annaSatunnainenPelilaudanIndeksi() <= 9;
 	}
 	@Test
 	void test() {
