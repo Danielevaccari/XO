@@ -1,3 +1,4 @@
+package ristinolla;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

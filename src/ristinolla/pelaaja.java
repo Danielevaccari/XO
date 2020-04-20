@@ -1,3 +1,4 @@
+package ristinolla;
 import java.util.Scanner;
 
 public class pelaaja {
