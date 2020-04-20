@@ -18,13 +18,3 @@
   </build>
 </project>
 
-<plugin>
-                <groupId>de.sormuras.junit</groupId>
-                <artifactId>junit-platform-maven-plugin</artifactId>
-                <version>1.0.0-M5</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <executor>JAVA</executor>
-                </configuration>
-            </plugin>
-            
