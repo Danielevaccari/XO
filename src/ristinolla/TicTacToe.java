@@ -11,7 +11,6 @@ public class TicTacToe {
 		System.out.println("- Syötä numero 2 kaksinpelille -");
 
 		ristikko lauta = new ristikko();
-		//vääräsyöte -> kaksinpeli korjaa laittamalla rajotukset inputille
 		
 
 		if (lauta.palautaYksinVaiKaksinpeli() == 1) {
