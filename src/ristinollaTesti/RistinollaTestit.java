@@ -8,7 +8,7 @@ class RistinollaTestit {
 	
 	@Test
 	public void antaakoSatunnaisenIndeksinVäliltäYksViivaYhdeksän(){
-		assert testilauta.annaSatunnainenPelilaudanIndeksi() == 1 && testilauta.annaSatunnainenPelilaudanIndeksi() <= 9;
+		assert testilauta.annaSatunnainenPelilaudanIndeksi() = 1 && testilauta.annaSatunnainenPelilaudanIndeksi() <= 9;
 	}
 
 }
