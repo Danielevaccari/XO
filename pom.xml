@@ -50,13 +50,13 @@
     <!-- ==== START OF SIMPLE CONFIGURATION ==== -->
     
     <!-- the three parts of the artifact name -->
-    <groupId>fi.utu.tech</groupId>
+    <groupId>TicTacToe</groupId>
     <artifactId>TicTacToe</artifactId>
-    <version>1.1</version>
+    <version>0.0.1-SNAPSHOT</version>
     
     <!-- additional information about the project -->
-    <name>jqwik example project</name>
-    <url>https://gitlab.utu.fi/tech/education/oom/example-unittest</url>
+    <name>tictactoemaven</name>
+    <url></url>
     
     <packaging>jar</packaging>
 
