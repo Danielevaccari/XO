@@ -51,7 +51,7 @@
     
     <!-- the three parts of the artifact name -->
     <groupId>fi.utu.tech</groupId>
-    <artifactId>example-unittest</artifactId>
+    <artifactId>TicTacToe</artifactId>
     <version>1.1</version>
     
     <!-- additional information about the project -->
@@ -63,7 +63,7 @@
     <!-- HINT: More configuration here! -->
     <properties>
         <!-- Configures this project to use 'fi.utu.tech.AppMain' as its main class -->
-        <project.mainclass>fi.utu.tech.oomkit.examples.chooser.Main</project.mainclass>
+        <project.mainclass>fi.utu.tech.oomkit.examples.chooser.TicTacToe</project.mainclass>
         
         
         <!-- Don't touch these unless you know what you're doing!
@@ -71,7 +71,7 @@
              For example, the source encoding should always be utf-8.
              You're probably doing something stupid if you think it
              should be a 8-bit code page in 2019. -->
-        <jdk.version>11</jdk.version>
+        <jdk.version>13.0.1</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jqwik.version>1.2.0</jqwik.version>
         <junit.version>5.5.2</junit.version>
