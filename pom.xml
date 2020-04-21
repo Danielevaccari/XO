@@ -63,7 +63,7 @@
     <!-- HINT: More configuration here! -->
     <properties>
         <!-- Configures this project to use 'fi.utu.tech.AppMain' as its main class -->
-        <project.mainclass>TicTacToe</project.mainclass>
+        <project.mainclass>ristinolla.TicTacToe</project.mainclass>
         
         
         <!-- Don't touch these unless you know what you're doing!
