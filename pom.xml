@@ -56,7 +56,7 @@
     
     <!-- additional information about the project -->
     <name>tictactoemaven</name>
-    <url></url>
+    <url>https://gitlab.utu.fi/djvacc/tictactoe</url>
     
     <packaging>jar</packaging>
 
