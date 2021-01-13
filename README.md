@@ -5,7 +5,7 @@ Tämä projekti on java ohjelmointikielellä toteutettu ristinolla peli, joka on
 
 **Asennusohjeet**
 
-1. Tarkista että sinulla on java koneellasi
+1. Tarkista että sinulla on java koneellasi: java -version
 
 2. Kloonaa projekti omalle koneelle menemällä kansioon johon haluat sijoittaa projektin ja käyttämällä komentoa:
 
